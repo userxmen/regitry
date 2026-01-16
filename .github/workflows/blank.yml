@@ -12,6 +12,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+      inputs:
+        docker_tag:  # Input pour le tag Docker
+          description: 'Tag pour l''image Docker (ex. v1.0 ou latest)'
+          required: false  # Optionnel, avec valeur par défaut ci-dessous
+          default: 'latest'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
